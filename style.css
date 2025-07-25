@@ -9,8 +9,7 @@
 body {
     background-color: #090b1aff;
     color: white;
-    /*font-family: "Inter", sans-serif;
-    font-family: "Lexend Deca", sans-serif;*/
+    font-family: 'Lexend Deca', sans-serif;
 }
 
 .main-container {
@@ -21,14 +20,70 @@ body {
 }
 
 .card {
+    background-color: #1c1a38ff;
     max-width: 300px;
-    background-color: aqua;
+    border-radius: 10px;
+    text-align: center;
+    overflow: hidden;
 }
 
 header {
-   
+    position: relative;
 }
+
+/* Add a purple overlay on top of the image inside the header */
+header::after {
+    content: ""; /* Required to make the pseudo-element appear */
+    position: absolute; /* Allows positioning over the header */
+    inset: 0; /* Shorthand for top: 0; right: 0; bottom: 0; left: 0; (fills the entire header) */
+    background-color: #aa5cdb;
+    mix-blend-mode: multiply; /* Blends the overlay with the image underneath */
+    opacity: 0.75; /* Makes the overlay semi-transparent so the image is still visible */
+}
+
 
 header img {
     width: 100%;
+}
+
+main{
+    padding: 1em 2em 2em;
+}
+
+main h1 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 1.5em;
+    margin-bottom: 1em;
+}
+
+main h1 .highlight {
+    color: #aa5cdbff;
+}
+
+main p {
+    font-size: 0.8em;
+    color: #ffffffbf;
+}
+
+.stats {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    padding-bottom: 1.8em;
+}
+
+.stat-number {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    color: white;
+    font-size: 1.4em;
+}
+
+.stat-label {
+    color: #ffffff99;
+    font-size: 0.8em;
+    margin-top: 0.3em;
 }
