@@ -1,108 +1,131 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&family=Lexend+Deca:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca:wght@400&display=swap');
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    background-color: #090b1aff;
-    color: white;
-    font-family: 'Lexend Deca', sans-serif;
+  background-color: #090b1a;
+  color: white;
+  font-family: 'Lexend Deca', sans-serif;
+  line-height: 1.6;
 }
 
 .main-container {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2em;
 }
 
 .card {
-    background-color: #1c1a38ff;
-    max-width: 300px;
-    border-radius: 10px;
-    text-align: center;
-    overflow: hidden;
+  background-color: #1b1938;
+  border-radius: 10px;
+  overflow: hidden;
+  max-width: 330px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 
-header {
-    position: relative;
+.card__image {
+  position: relative;
 }
 
-/* Add a purple overlay on top of the image inside the header */
-header::after {
-    content: ""; /* Required to make the pseudo-element appear */
-    position: absolute; /* Allows positioning over the header */
-    inset: 0; /* Shorthand for top: 0; right: 0; bottom: 0; left: 0; (fills the entire header) */
-    background-color: #aa5cdb;
-    mix-blend-mode: multiply; /* Blends the overlay with the image underneath */
-    opacity: 0.75; /* Makes the overlay semi-transparent so the image is still visible */
+.card__image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: #aa5cdb;
+  mix-blend-mode: multiply;
+  opacity: 0.75;
 }
 
-
-header img {
-    width: 100%;
+.card__image img {
+  width: 100%;
+  display: block;
 }
 
-main{
-    padding: 1em 2em 2em;
+.card__content {
+  padding: 2em;
 }
 
-main h1 {
-    font-family: 'Inter', sans-serif;
-    font-weight: 700;
-    font-size: 1.5em;
-    margin-bottom: 1em;
+.card__content h1 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-bottom: 1em;
 }
 
-main h1 .highlight {
-    color: #aa5cdbff;
+.highlight {
+  color: #aa5cdb;
 }
 
-main p {
-    font-size: 0.8em;
-    color: #ffffffbf;
+.description {
+  color: #ffffffbf;
+  font-size: 0.9rem;
+  margin-bottom: 2em;
 }
 
 .stats {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
+
+.stat__number {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: white;
+}
+
+.stat__label {
+  color: #ffffff99;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* MEDIA QUERY FOR DESKTOP */
+@media (min-width: 768px) {
+  .card {
+    max-width: 1000px;
+    flex-direction: row-reverse;
+    text-align: left;
+  }
+
+  .card__image {
+    width: 50%;
+  }
+
+  .card__image img {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .card__content {
+    width: 50%;
+    padding: 4em;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-    gap: 1em;
-    padding-bottom: 1.8em;
-}
+  }
 
-.stat-number {
-    font-family: 'Inter', sans-serif;
-    font-weight: 700;
-    color: white;
-    font-size: 1.4em;
-}
+  .card__content h1 {
+    font-size: 2rem;
+  }
 
-.stat-label {
-    color: #ffffff99;
-    font-size: 0.8em;
-    margin-top: 0.3em;
-}
+  .description {
+    font-size: 1rem;
+    margin-bottom: 3em;
+  }
 
-@media screen and (min-width: 768px) {
-    .card {
-        display: flex;
-        flex-direction: row-reverse;
-        max-width: 1000px;
-        height: 400px;
-        text-align: left;
-    }
-
-    header, .content {
-        width: 50%;
-    }
-
-    header img {
-        width: 100%;
-        height: 100%;
-    }
+  .stats {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }

@@ -1,43 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Frontend Mentor - Stats Preview Card Component Main</title>
-    <link rel="shortcut icon" href="images/favicon-32x32.png" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stats Preview Card Component</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="shortcut icon" href="images/favicon-32x32.png" type="image/x-icon">
 </head>
-
 <body>
-    <div class="main-container">
-        <div class="card">
-            <header>
-                <img src="images/image-header-mobile.jpg" alt="Header Image">
-            </header>
-            <div class="content">
-                <main>
-                    <h1 class="title">Get <span class="highlight">insights</span> that help your business grow.</h1>
-                    <p>Discover the benefits of data analytics and make better decisions regarding revenue, customer
-                        experience, and overall efficiency.</p>
-                </main>
-                <footer class="stats">
-                    <div class="stat">
-                        <p class="stat-number">10k+</p>
-                        <p class="stat-label">COMPANIES</p>
-                    </div>
-                     <div class="stat">
-                        <p class="stat-number">314</p>
-                        <p class="stat-label">TEMPLATES</p>
-                    </div>
-                     <div class="stat">
-                        <p class="stat-number">12M+</p>
-                        <p class="stat-label">QUERIES</p>
-                    </div>
-                </footer>
-            </div>
-        </div>
-    </div>
-</body>
+  <main class="main-container">
+    <article class="card">
+      <div class="card__image">
+        <img src="images/image-header-mobile.jpg" alt="Office team working together" />
+      </div>
 
+      <div class="card__content">
+        <h1>Get <span class="highlight">insights</span> that help your business grow.</h1>
+        <p class="description">
+          Discover the benefits of data analytics and make better decisions regarding revenue, customer experience, and overall efficiency.
+        </p>
+
+        <div class="stats">
+          <div class="stat">
+            <p class="stat__number">10k+</p>
+            <p class="stat__label">Companies</p>
+          </div>
+          <div class="stat">
+            <p class="stat__number">314</p>
+            <p class="stat__label">Templates</p>
+          </div>
+          <div class="stat">
+            <p class="stat__number">12M+</p>
+            <p class="stat__label">Queries</p>
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+</body>
 </html>
